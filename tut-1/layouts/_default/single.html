@@ -9,9 +9,15 @@
     {{ $currentPage := .Title }}
     {{ range .Site.Pages }}
         <a href="{{ .Permalink }}"
-        style="{{ if eq .Title $currentPage }} color: indianred {{end}}">
-        {{ .Title }}</a>
+           style="{{ if eq .Title $currentPage }} color: indianred {{end}}">
+            {{ .Title }}</a>
     {{end}}
+
+    <ul>
+        {{ range .Site.Data.products.products }}
+            <li>{{ .title }} - ${{ .price }}</li>
+        {{end}}
+    </ul>
 {{end}}
 
 
