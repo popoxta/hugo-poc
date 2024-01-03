@@ -10,3 +10,11 @@ moods = ['happy', 'buns']
 Cool!
 This is a.md file!!
 {{< youtube ZYQ5k0RQzmo >}}
+
+{{< myshortcode color="blue" >}}
+{{< mysecondshortcode "Hello world!" >}}
+
+{{% mybigshortcode %}}
+    This is my shortcode text!
+    # With formatting!
+{{% /mybigshortcode %}}
