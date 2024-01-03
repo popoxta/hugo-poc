@@ -2,3 +2,9 @@ baseURL = 'https://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'ga-hugo-theme'
+
+[taxonomies]
+    tag = 'tag'
+    category = 'categories'
+    mood = 'moods'
+
