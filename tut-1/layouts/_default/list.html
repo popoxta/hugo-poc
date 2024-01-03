@@ -1,5 +1,16 @@
-{{.Content}}
-{{range .Pages}}
-    <a href="{{.Permalink}}">{{.Title}}</a>
-    <br>
-{{end}}
+{{ .Content }}
+List Page!!!!!!!!!
+{{ range .Pages }}
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+
+    {{ if eq .Params.Author "Lari" }}
+        <p>{{ .Title }} is a Lari page. woohoo!</p>
+    {{ else if eq .Params.Author "Alex" }}
+        <p>{{ .Title }} is a spawn's page. wowsers!</p>
+    {{ else if not ( .Params.Author )}}
+        <p>There is no author - no author at all!</p>
+    {{ else }}
+        <p>{{ .Title }} has a mystery author - how mysterious~</p>
+    {{ end }}
+
+{{ end }}

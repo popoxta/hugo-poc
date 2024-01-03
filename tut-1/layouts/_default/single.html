@@ -1,8 +1,17 @@
 {{define "main"}}
-<h1>A single page about {{.Title}}{{if .Params.Author}} by {{.Params.Author}}{{end}}!!!</h1>
-<h2>{{.Title}}</h2>
-<p>{{ time.Format "2 Jan 2006" .Date }}</p>
-{{.Content}}
+    <h1>A single page about {{.Title}}{{if .Params.Author}} by {{.Params.Author}}{{end}}!!!</h1>
+    <h2>{{.Title}}</h2>
+    <p>{{ time.Format "2 Jan 2006" .Date }}</p>
+    {{ truncate 20 .Content }} - Truncated~! And now for the non-truncated...
+    {{.Content}}
+    <br>
+    <h2>Other pages...</h2>
+    {{ $currentPage := .Title }}
+    {{ range .Site.Pages }}
+        <a href="{{ .Permalink }}"
+        style="{{ if eq .Title $currentPage }} color: indianred {{end}}">
+        {{ .Title }}</a>
+    {{end}}
 {{end}}
 
 
