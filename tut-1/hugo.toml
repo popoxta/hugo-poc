@@ -7,4 +7,4 @@ theme = 'ga-hugo-theme'
     tag = 'tag'
     category = 'categories'
     mood = 'moods'
-
+    author = 'author'
