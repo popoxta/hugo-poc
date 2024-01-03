@@ -6,8 +6,10 @@
 </head>
 <body>
 asdasas
+{{ partial "header.html" . }}
+
 {{ block "main" . }}{{ end }}
 
-{{ block "footer" . }}{{ end }}
+{{ partial "footer.html" ( dict "mySpecialMessage" "Thank you for reading!" "context" .)}}
 </body>
 </html>

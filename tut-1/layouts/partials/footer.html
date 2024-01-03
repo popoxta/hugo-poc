@@ -1,3 +1,2 @@
-{{ define "footer" }}
-    <p>This is the footer hun!</p>
-{{ end }}
+<p>This is the footer hun!</p>
+<p>{{ .mySpecialMessage }} - The date is {{ time.Format "2 Jan 2006" .context.Date }}.</p>
