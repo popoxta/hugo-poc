@@ -1,0 +1,17 @@
+{
+  "name": "poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./tailwind/tailwind.css -o ./static/styles/styles.css",
+    "tailwind:watch": "npm run tailwind -- --watch",
+    "tailwind:build": "npm run tailwind -- --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

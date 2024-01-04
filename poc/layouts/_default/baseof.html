@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>POC - {{ .Title }}</title>
+    {{- with resources.Get "/styles/styles.css" }}
+        {{- with . | minify | fingerprint }}
+            <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+        {{- end }}
+    {{- end }}
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body class="min-h-lvh">
+{{- partial "header.html" . }}
+
+<main class="h-full">
+    {{ block "main" . }}{{end}}
+</main>
+
+{{- partial "footer.html" . }}
+
+</body>
+</html>

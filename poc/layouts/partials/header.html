@@ -1,0 +1,15 @@
+<header class="mb-10">
+    <h1 class="text-slate-700 text-6xl font-bold">POC Site</h1>
+    {{ .Site.Menus.main }}
+    <nav>
+        <ul class="flex gap-5">
+            {{- range .Site.Menus.items }}
+
+                <li>
+                    <a href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+
+            {{ end }}
+        </ul>
+    </nav>
+</header>
